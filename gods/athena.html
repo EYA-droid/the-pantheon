@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Athena — The Pantheon</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:
+radial-gradient(circle at 50% 0%,#292b2b,#0d0f0f 45%,#040505);
+color:#e7e2d5;
+font-family:Georgia,"Times New Roman",serif;
+line-height:1.8;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+z-index:50;
+padding:18px 30px;
+background:#040505e8;
+backdrop-filter:blur(15px);
+border-bottom:1px solid #aeb4a855;
+}
+
+.nav-inner{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:#c6c8b5;
+letter-spacing:5px;
+font:14px Arial;
+text-decoration:none;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:#aaa9a0;
+text-decoration:none;
+font:11px Arial;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.nav-links a:hover{
+color:#d4c98b;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:130px 25px 80px;
+
+background:
+radial-gradient(
+circle at 50% 35%,
+rgba(169,165,116,.17),
+transparent 45%
+);
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.eyebrow{
+color:#c6bd83;
+font:700 11px Arial;
+letter-spacing:5px;
+text-transform:uppercase;
+}
+
+h1{
+font-size:clamp(70px,14vw,160px);
+line-height:.82;
+letter-spacing:7px;
+margin:30px 0;
+text-shadow:0 20px 70px #000;
+}
+
+.subtitle{
+color:#aaa9a0;
+font-size:20px;
+max-width:720px;
+margin:auto;
+}
+
+.line{
+width:180px;
+height:1px;
+margin:38px auto;
+background:#c6bd83;
+}
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:110px 25px;
+}
+
+.section-title{
+font-size:52px;
+line-height:1.1;
+margin:15px 0 25px;
+}
+
+.panel{
+background:
+linear-gradient(
+145deg,
+#1b1d1c,
+#070808
+);
+
+border:1px solid #b7b38a44;
+
+padding:42px;
+margin-top:25px;
+
+box-shadow:0 30px 80px #0009;
+
+transition:.3s;
+}
+
+.panel:hover{
+border-color:#c6bd8399;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-top:35px;
+}
+
+.info{
+border-top:1px solid #b7b38a55;
+padding-top:15px;
+color:#aaa9a0;
+font:12px Arial;
+letter-spacing:1px;
+}
+
+.info strong{
+display:block;
+color:#c6bd83;
+margin-bottom:7px;
+}
+
+.realm{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:35px;
+}
+
+.realm-card{
+padding:28px 20px;
+background:#101211;
+border:1px solid #b7b38a33;
+text-align:center;
+transition:.3s;
+}
+
+.realm-card:hover{
+border-color:#c6bd83;
+background:#191b19;
+}
+
+.realm-card .symbol{
+font-size:36px;
+display:block;
+margin-bottom:10px;
+}
+
+.realm-card h3{
+margin:8px 0;
+color:#d7d1a3;
+}
+
+.realm-card p{
+font-size:14px;
+color:#999a92;
+}
+
+.quote{
+border-left:2px solid #c6bd83;
+padding-left:25px;
+color:#c6bd83;
+font-size:25px;
+font-style:italic;
+}
+
+.back{
+display:inline-block;
+margin-top:35px;
+padding:14px 25px;
+border:1px solid #c6bd83;
+color:#c6bd83;
+text-decoration:none;
+font:11px Arial;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.back:hover{
+background:#c6bd83;
+color:#080909;
+}
+
+footer{
+text-align:center;
+padding:55px 20px;
+border-top:1px solid #b7b38a44;
+color:#6f7069;
+font:10px Arial;
+letter-spacing:2px;
+}
+
+@media(max-width:750px){
+
+.nav-links{
+display:none;
+}
+
+.info-grid,
+.realm{
+grid-template-columns:1fr;
+}
+
+.panel{
+padding:27px;
+}
+
+h1{
+font-size:75px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="nav-inner">
+
+<a class="logo" href="../index.html">
+THE PANTHEON
+</a>
+
+<div class="nav-links">
+
+<a href="../index.html">Home</a>
+<a href="../gods.html">Gods</a>
+<a href="../heroes.html">Heroes</a>
+<a href="../monsters.html">Monsters</a>
+<a href="../myths.html">Myths</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+HALL OF OLYMPUS · EXHIBIT V
+</div>
+
+<h1>ATHENA</h1>
+
+<div class="line"></div>
+
+<p class="subtitle">
+Goddess of Wisdom · Strategic Warfare · Crafts · Guardian of Athens
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+THE EXHIBIT
+</div>
+
+<h2 class="section-title">
+The Wise Goddess
+</h2>
+
+<div class="panel">
+
+<p>
+Athena is one of the most important Olympian gods.
+She represents wisdom, strategic warfare, crafts and
+reason.
+</p>
+
+<p>
+Unlike Ares, who represents the violent and chaotic side
+of warfare, Athena is associated with planning, discipline,
+strategy and intelligent decision-making.
+</p>
+
+<p>
+She became the patron deity of Athens, one of the most
+important cities of the ancient Greek world.
+</p>
+
+</div>
+
+<div class="info-grid">
+
+<div class="info">
+<strong>DOMAIN</strong>
+Wisdom · Strategy · Crafts
+</div>
+
+<div class="info">
+<strong>FATHER</strong>
+Zeus
+</div>
+
+<div class="info">
+<strong>SYMBOLS</strong>
+Owl · Olive Tree · Aegis
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+BIRTH OF ATHENA
+</div>
+
+<h2 class="section-title">
+Born From Zeus
+</h2>
+
+<div class="panel">
+
+<p>
+One of the strangest birth stories in Greek mythology says
+that Athena emerged fully grown and armed from the head of
+Zeus.
+</p>
+
+<p>
+The story emphasises her connection with intelligence,
+thought and divine wisdom.
+</p>
+
+<p class="quote">
+Athena did not simply possess wisdom — she was born from
+the mind of Zeus.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+SYMBOLS
+</div>
+
+<h2 class="section-title">
+Signs of Athena
+</h2>
+
+<div class="realm">
+
+<div class="realm-card">
+
+<span class="symbol">🦉</span>
+
+<h3>The Owl</h3>
+
+<p>
+The owl became one of Athena's most famous symbols,
+representing wisdom and clear sight.
+</p>
+
+</div>
+
+
+<div class="realm-card">
+
+<span class="symbol">🫒</span>
+
+<h3>The Olive Tree</h3>
+
+<p>
+Athena's sacred olive tree became a symbol of peace,
+prosperity and civilisation.
+</p>
+
+</div>
+
+
+<div class="realm-card">
+
+<span class="symbol">🛡️</span>
+
+<h3>The Aegis</h3>
+
+<p>
+A powerful divine protective object associated with Athena
+and Zeus.
+</p>
+
+</div>
+
+
+<div class="realm-card">
+
+<span class="symbol">⚔️</span>
+
+<h3>Strategy</h3>
+
+<p>
+Athena represents intelligent and disciplined warfare.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+ATHENS
+</div>
+
+<h2 class="section-title">
+The Contest for the City
+</h2>
+
+<div class="panel">
+
+<p>
+Athena and Poseidon competed for the patronage of the
+city that would eventually become Athens.
+</p>
+
+<p>
+Poseidon offered a powerful gift, while Athena offered
+the olive tree. The olive tree was valued for its food,
+oil, wood and many uses.
+</p>
+
+<p>
+Athena became the city's patron and the Parthenon was
+later dedicated to her.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+HEROES
+</div>
+
+<h2 class="section-title">
+Athena & Odysseus
+</h2>
+
+<div class="panel">
+
+<p>
+Athena frequently appears as a supporter of heroes who
+demonstrate intelligence and courage.
+</p>
+
+<p>
+She is especially important in the story of Odysseus,
+whose cleverness and strategic thinking made him one of
+her favourite mortal heroes.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+FAMILY
+</div>
+
+<h2 class="section-title">
+The House of Athena
+</h2>
+
+<div class="panel">
+
+<div class="info-grid">
+
+<div class="info">
+<strong>FATHER</strong>
+Zeus
+</div>
+
+<div class="info">
+<strong>MOTHER</strong>
+Metis
+</div>
+
+<div class="info">
+<strong>STATUS</strong>
+Virgin Goddess · Olympian
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+LEGACY
+</div>
+
+<div class="panel">
+
+<p class="quote">
+Athena represents the power of a mind that can turn
+knowledge into action.
+</p>
+
+<p>
+Her mythology connects wisdom with courage, strategy,
+craftsmanship and civilisation.
+</p>
+
+</div>
+
+<a class="back" href="../gods.html">
+← Return to the Hall of Olympus
+</a>
+
+</section>
+
+
+<footer>
+THE PANTHEON · DIGITAL MUSEUM OF GREEK MYTHOLOGY
+</footer>
+
+</body>
+</html>
