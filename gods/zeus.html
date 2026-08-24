@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zeus — The Pantheon</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at 50% 0%, #292116 0%, #0b0a08 42%, #050505 100%);
+    color: #eee4cf;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.7;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .05;
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 3px,
+            #c9a45b 4px
+        );
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 20;
+    padding: 18px 30px;
+    background: rgba(5,5,5,.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,164,91,.35);
+}
+
+.nav-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #c9a45b;
+    letter-spacing: 5px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #bcb3a1;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: #c9a45b;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 25px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(201,164,91,.20),
+        transparent 65%
+    );
+}
+
+.hero-content {
+    position: relative;
+    max-width: 900px;
+}
+
+.eyebrow {
+    color: #c9a45b;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: clamp(70px, 13vw, 150px);
+    line-height: .85;
+    letter-spacing: 5px;
+    margin: 25px 0;
+    text-shadow: 0 20px 60px #000;
+}
+
+.subtitle {
+    color: #b7ad9a;
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.gold-line {
+    width: 180px;
+    height: 1px;
+    margin: 35px auto;
+    background: #c9a45b;
+}
+
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 110px 25px;
+}
+
+.section-title {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.panel {
+    background: linear-gradient(
+        145deg,
+        rgba(30,27,21,.95),
+        rgba(8,8,7,.95)
+    );
+    border: 1px solid rgba(201,164,91,.35);
+    padding: 40px;
+    margin-top: 25px;
+    box-shadow: 0 25px 70px rgba(0,0,0,.45);
+}
+
+.panel:hover {
+    border-color: rgba(201,164,91,.7);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.info {
+    border-top: 1px solid rgba(201,164,91,.45);
+    padding-top: 15px;
+    color: #b8ae9b;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.info strong {
+    display: block;
+    color: #c9a45b;
+    margin-bottom: 6px;
+}
+
+.symbol {
+    font-size: 40px;
+    color: #c9a45b;
+}
+
+.quote {
+    border-left: 2px solid #c9a45b;
+    padding-left: 25px;
+    color: #c9a45b;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 25px;
+    border: 1px solid #c9a45b;
+    color: #c9a45b;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.back:hover {
+    background: #c9a45b;
+    color: #080807;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    border-top: 1px solid rgba(201,164,91,.3);
+    color: #777064;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 750px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-inner">
+
+        <a class="logo" href="../index.html">
+            THE PANTHEON
+        </a>
+
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../gods.html">Gods</a>
+            <a href="../heroes.html">Heroes</a>
+            <a href="../monsters.html">Monsters</a>
+            <a href="../myths.html">Myths</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            HALL OF OLYMPUS · EXHIBIT I
+        </div>
+
+        <h1>ZEUS</h1>
+
+        <div class="gold-line"></div>
+
+        <p class="subtitle">
+            King of the Gods · Lord of the Sky · Wielder of the Thunderbolt
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="eyebrow">
+        THE EXHIBIT
+    </div>
+
+    <h2 class="section-title">
+        King of the Gods
+    </h2>
+
+    <div class="panel">
+
+        <p>
+            Zeus is the principal ruler of the Olympian gods in
+            Greek mythology. He is associated with the sky,
+            thunder, justice, hospitality and kingship.
+        </p>
+
+        <p>
+            In many traditions, Zeus became ruler after leading
+            the younger generation of gods against the Titans.
+            From Mount Olympus, he was regarded as a powerful
+            guardian of divine and cosmic order.
+        </p>
+
+    </div>
+
+
+    <div class="info-grid">
+
+        <div class="info">
+            <strong>DOMAIN</strong>
+            Sky · Thunder · Kingship
+        </div>
+
+        <div class="info">
+            <strong>PARENTS</strong>
+            Cronus & Rhea
+        </div>
+
+        <div class="info">
+            <strong>SYMBOLS</strong>
+            Thunderbolt · Eagle · Oak
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="eyebrow">
+        ORIGINS
+    </div>
+
+    <h2 class="section-title">
+        The Rise of Zeus
+    </h2>
+
+    <div class="panel">
+
+        <p>
+            Zeus was the youngest child of Cronus and Rhea.
+            Cronus feared a prophecy that one of his children
+            would overthrow him, so he swallowed his children
+            when they were born.
+        </p>
+
+        <p>
+            Rhea protected Zeus by hiding him and giving Cronus
+            a stone wrapped in cloth instead. Zeus eventually
+            returned, helped free his siblings and led the
+            younger gods in the struggle against the Titans.
+        </p>
+
+        <p>
+            After victory, the realms were divided among the
+            brothers Zeus, Poseidon and Hades.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="eyebrow">
+        SYMBOLS
+    </div>
+
+    <h2 class="section-title">
+        Signs of the Thunderer
+    </h2>
+
+    <div class="info-grid">
+
+        <div class="panel">
+            <div class="symbol">⚡</div>
+            <h3>Thunderbolt</h3>
+            <p>
+                Zeus's most famous symbol, representing his
+                authority over the sky and his immense power.
+            </p>
+        </div>
+
+        <div class="panel">
+            <div class="symbol">🦅</div>
+            <h3>Eagle</h3>
+            <p>
+                The eagle became closely associated with Zeus
+                and his position as the supreme Olympian.
+            </p>
+        </div>
+
+        <div class="panel">
+            <div class="symbol">🌳</div>
+            <h3>Oak</h3>
+            <p>
+                The oak was sacred to Zeus, particularly at
+                the ancient sanctuary of Dodona.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="eyebrow">
+        FAMILY
+    </div>
+
+    <h2 class="section-title">
+        The House of Zeus
+    </h2>
+
+    <div class="panel">
+
+        <div class="info-grid">
+
+            <div class="info">
+                <strong>FATHER</strong>
+                Cronus
+            </div>
+
+            <div class="info">
+                <strong>MOTHER</strong>
+                Rhea
+            </div>
+
+            <div class="info">
+                <strong>SIBLINGS</strong>
+                Hera · Poseidon · Hades · Demeter · Hestia
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="eyebrow">
+        LEGACY
+    </div>
+
+    <div class="panel">
+
+        <p class="quote">
+            Zeus stands at the centre of the Olympian order,
+            representing power, authority and the unpredictable
+            forces of the sky.
+        </p>
+
+        <p>
+            His stories appear throughout Greek mythology and
+            connect him to gods, heroes, kings and cities across
+            the ancient Greek world.
+        </p>
+
+    </div>
+
+    <a class="back" href="../gods.html">
+        ← Return to the Hall of Olympus
+    </a>
+
+</section>
+
+
+<footer>
+    THE PANTHEON · DIGITAL MUSEUM OF GREEK MYTHOLOGY
+</footer>
+
+</body>
+</html>
