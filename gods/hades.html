@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hades — The Pantheon</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+margin:0;
+background:
+radial-gradient(
+circle at 50% 0%,
+#211a25 0%,
+#0d0a10 35%,
+#030304 75%
+);
+color:#e8dfcf;
+font-family:Georgia,"Times New Roman",serif;
+line-height:1.8;
+}
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+background:
+radial-gradient(
+circle at 20% 80%,
+rgba(101,72,119,.08),
+transparent 30%
+),
+radial-gradient(
+circle at 80% 20%,
+rgba(166,125,63,.05),
+transparent 30%
+);
+z-index:-1;
+}
+
+
+/* NAVIGATION */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+z-index:50;
+padding:18px 30px;
+
+background:rgba(3,3,4,.88);
+
+backdrop-filter:blur(15px);
+
+border-bottom:
+1px solid rgba(180,150,95,.3);
+}
+
+.nav-inner{
+max-width:1200px;
+margin:auto;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:#bfa36a;
+letter-spacing:5px;
+font:14px Arial,sans-serif;
+text-decoration:none;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:#aaa39a;
+text-decoration:none;
+
+font:11px Arial,sans-serif;
+
+letter-spacing:2px;
+text-transform:uppercase;
+
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#d2b678;
+}
+
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+padding:
+140px 25px 90px;
+
+position:relative;
+
+overflow:hidden;
+}
+
+.hero:before{
+
+content:"";
+
+position:absolute;
+
+width:700px;
+height:700px;
+
+border-radius:50%;
+
+background:
+radial-gradient(
+circle,
+rgba(96,65,112,.22),
+transparent 65%
+);
+
+filter:blur(10px);
+
+}
+
+.hero-content{
+position:relative;
+
+max-width:900px;
+}
+
+.eyebrow{
+color:#bfa36a;
+
+font:700 11px Arial,sans-serif;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+}
+
+h1{
+font-size:
+clamp(70px,14vw,160px);
+
+line-height:.8;
+
+letter-spacing:7px;
+
+margin:30px 0;
+
+text-shadow:
+0 20px 70px #000,
+0 0 40px rgba(105,72,125,.25);
+}
+
+.subtitle{
+
+color:#a9a29a;
+
+font-size:20px;
+
+max-width:720px;
+
+margin:auto;
+}
+
+.line{
+
+width:180px;
+
+height:1px;
+
+margin:38px auto;
+
+background:#bfa36a;
+}
+
+
+/* SECTIONS */
+
+.section{
+
+max-width:1100px;
+
+margin:auto;
+
+padding:110px 25px;
+}
+
+.section-title{
+
+font-size:52px;
+
+line-height:1.1;
+
+margin:
+15px 0 25px;
+}
+
+.panel{
+
+background:
+
+linear-gradient(
+145deg,
+rgba(25,20,29,.96),
+rgba(5,5,7,.98)
+);
+
+border:
+1px solid rgba(191,163,106,.28);
+
+padding:42px;
+
+margin-top:25px;
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.65);
+
+transition:.35s;
+}
+
+.panel:hover{
+
+border-color:
+rgba(191,163,106,.6);
+
+transform:
+translateY(-2px);
+}
+
+
+/* INFORMATION */
+
+.info-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:18px;
+
+margin-top:35px;
+}
+
+.info{
+
+border-top:
+1px solid rgba(191,163,106,.35);
+
+padding-top:15px;
+
+color:#aaa39a;
+
+font:12px Arial,sans-serif;
+
+letter-spacing:1px;
+}
+
+.info strong{
+
+display:block;
+
+color:#bfa36a;
+
+margin-bottom:7px;
+}
+
+
+/* UNDERWORLD MAP */
+
+.realm{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:15px;
+
+margin-top:35px;
+}
+
+.realm-card{
+
+padding:28px 20px;
+
+background:
+rgba(16,13,19,.9);
+
+border:
+1px solid rgba(191,163,106,.2);
+
+text-align:center;
+
+transition:.3s;
+}
+
+.realm-card:hover{
+
+border-color:#bfa36a;
+
+background:
+rgba(29,23,34,.95);
+
+}
+
+.realm-card .symbol{
+
+font-size:36px;
+
+display:block;
+
+margin-bottom:10px;
+}
+
+.realm-card h3{
+
+margin:8px 0;
+
+color:#d8c8a4;
+}
+
+.realm-card p{
+
+font-size:14px;
+
+color:#938d86;
+}
+
+
+/* QUOTE */
+
+.quote{
+
+border-left:
+2px solid #bfa36a;
+
+padding-left:25px;
+
+color:#bfa36a;
+
+font-size:25px;
+
+font-style:italic;
+}
+
+
+/* BACK BUTTON */
+
+.back{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:14px 25px;
+
+border:
+1px solid #bfa36a;
+
+color:#bfa36a;
+
+text-decoration:none;
+
+font:11px Arial,sans-serif;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+transition:.3s;
+}
+
+.back:hover{
+
+background:#bfa36a;
+
+color:#080708;
+}
+
+
+/* FOOTER */
+
+footer{
+
+text-align:center;
+
+padding:55px 20px;
+
+border-top:
+1px solid rgba(191,163,106,.25);
+
+color:#69645e;
+
+font:10px Arial,sans-serif;
+
+letter-spacing:2px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:750px){
+
+.nav-links{
+display:none;
+}
+
+.info-grid{
+grid-template-columns:1fr;
+}
+
+.realm{
+grid-template-columns:
+repeat(2,1fr);
+}
+
+.panel{
+padding:27px;
+}
+
+h1{
+font-size:75px;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<nav>
+
+<div class="nav-inner">
+
+<a class="logo" href="../index.html">
+THE PANTHEON
+</a>
+
+<div class="nav-links">
+
+<a href="../index.html">Home</a>
+
+<a href="../gods.html">Gods</a>
+
+<a href="../heroes.html">Heroes</a>
+
+<a href="../monsters.html">Monsters</a>
+
+<a href="../myths.html">Myths</a>
+
+</div>
+
+</div>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+THE UNDERWORLD · EXHIBIT IV
+</div>
+
+<h1>HADES</h1>
+
+<div class="line"></div>
+
+<p class="subtitle">
+Lord of the Underworld · Keeper of the Dead · God of Hidden Wealth
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- INTRODUCTION -->
+
+<section class="section">
+
+<div class="eyebrow">
+THE EXHIBIT
+</div>
+
+<h2 class="section-title">
+Lord Beneath the Earth
+</h2>
+
+<div class="panel">
+
+<p>
+Hades is the ruler of the Underworld, the realm of the dead
+in Greek mythology. He is one of the three brothers who
+divided the cosmos after the defeat of the Titans.
+</p>
+
+<p>
+While Zeus received the sky and Poseidon received the sea,
+Hades received dominion over the world beneath the earth.
+His realm was not simply a place of punishment — it was
+the destination of the dead.
+</p>
+
+<p>
+Hades is therefore better understood as a stern ruler who
+maintains the boundaries between life and death.
+</p>
+
+</div>
+
+
+<div class="info-grid">
+
+<div class="info">
+<strong>DOMAIN</strong>
+Underworld · The Dead · Wealth
+</div>
+
+<div class="info">
+<strong>PARENTS</strong>
+Cronus & Rhea
+</div>
+
+<div class="info">
+<strong>SYMBOLS</strong>
+Bident · Cerberus · Helm of Darkness
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- THE REALM -->
+
+<section class="section">
+
+<div class="eyebrow">
+THE REALM BELOW
+</div>
+
+<h2 class="section-title">
+The Underworld
+</h2>
+
+<div class="panel">
+
+<p>
+The Greek Underworld was imagined as a vast and complex
+realm. Different regions were associated with different
+destinies for the dead.
+</p>
+
+</div>
+
+
+<div class="realm">
+
+
+<div class="realm-card">
+
+<span class="symbol">🌊</span>
+
+<h3>Styx</h3>
+
+<p>
+A sacred river forming one of the great boundaries of
+the Underworld.
+</p>
+
+</div>
+
+
+<div class="realm-card">
+
+<span class="symbol">⚖️</span>
+
+<h3>Judgement</h3>
+
+<p>
+The dead were judged and assigned their place within
+the realm.
+</p>
+
+</div>
+
+
+<div class="realm-card">
+
+<span class="symbol">🌿</span>
+
+<h3>Elysium</h3>
+
+<p>
+A blessed destination associated with exceptional souls
+in later traditions.
+</p>
+
+</div>
+
+
+<div class="realm-card">
+
+<span class="symbol">🔥</span>
+
+<h3>Tartarus</h3>
+
+<p>
+A deep region associated with imprisonment and punishment.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- CERBERUS -->
+
+<section class="section">
+
+<div class="eyebrow">
+GUARDIAN OF THE GATES
+</div>
+
+<h2 class="section-title">
+Cerberus
+</h2>
+
+<div class="panel">
+
+<p>
+Cerberus is the legendary guardian of the entrance to
+the Underworld. The monstrous hound prevents the dead
+from leaving and the living from entering freely.
+</p>
+
+<p>
+The creature became one of the most famous beings connected
+with Hades and the Underworld.
+</p>
+
+<div class="quote">
+No traveller simply walks into the realm of the dead.
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PERSEPHONE -->
+
+<section class="section">
+
+<div class="eyebrow">
+THE QUEEN BELOW
+</div>
+
+<h2 class="section-title">
+Hades & Persephone
+</h2>
+
+<div class="panel">
+
+<p>
+One of the best-known myths connected with Hades concerns
+Persephone, daughter of Demeter.
+</p>
+
+<p>
+The myth describes Persephone's movement between the world
+above and the Underworld. Her return to the surface became
+connected with the growth of vegetation and the changing
+seasons.
+</p>
+
+<p>
+The story became one of the most important myths associated
+with the ancient Greek understanding of life, death and
+renewal.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- SYMBOLS -->
+
+<section class="section">
+
+<div class="eyebrow">
+ATTRIBUTES
+</div>
+
+<h2 class="section-title">
+Symbols of the Lord Below
+</h2>
+
+
+<div class="realm">
+
+
+<div class="realm-card">
+
+<span class="symbol">🔱</span>
+
+<h3>Bident</h3>
+
+<p>
+A two-pronged weapon associated with Hades.
+</p>
+
+</div>
+
+
+<div class="realm-card">
+
+<span class="symbol">🐕</span>
+
+<h3>Cerberus</h3>
+
+<p>
+The guardian of the Underworld's gates.
+</p>
+
+</div>
+
+
+<div class="realm-card">
+
+<span class="symbol">🪖</span>
+
+<h3>Helm of Darkness</h3>
+
+<p>
+A magical helmet said to make its wearer invisible.
+</p>
+
+</div>
+
+
+<div class="realm-card">
+
+<span class="symbol">💎</span>
+
+<h3>Hidden Wealth</h3>
+
+<p>
+Hades was also associated with the riches hidden
+beneath the earth.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- FAMILY -->
+
+<section class="section">
+
+<div class="eyebrow">
+FAMILY
+</div>
+
+<h2 class="section-title">
+The House of Hades
+</h2>
+
+<div class="panel">
+
+<div class="info-grid">
+
+<div class="info">
+<strong>FATHER</strong>
+Cronus
+</div>
+
+<div class="info">
+<strong>MOTHER</strong>
+Rhea
+</div>
+
+<div class="info">
+<strong>BROTHERS</strong>
+Zeus · Poseidon
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- LEGACY -->
+
+<section class="section">
+
+<div class="eyebrow">
+LEGACY
+</div>
+
+<div class="panel">
+
+<p class="quote">
+Hades is not simply the god of death.
+He is the ruler of the world beyond life.
+</p>
+
+<p>
+His mythology reflects one of the oldest human questions:
+what happens when life ends?
+</p>
+
+<p>
+Through the Underworld, the Greeks created a vast mythological
+landscape where the dead continued their existence under the
+authority of a powerful and impartial king.
+</p>
+
+</div>
+
+
+<a class="back" href="../gods.html">
+← Return to the Hall of Olympus
+</a>
+
+</section>
+
+
+
+<footer>
+
+THE PANTHEON · DIGITAL MUSEUM OF GREEK MYTHOLOGY
+
+</footer>
+
+
+</body>
+</html>
