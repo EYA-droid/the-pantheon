@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Artemis — The Pantheon</title>
+
+<style>
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:
+radial-gradient(circle at 50% 0%,#182126,#090d10 45%,#030506);
+color:#e4e8e3;
+font-family:Georgia,"Times New Roman",serif;
+line-height:1.8;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+z-index:50;
+padding:18px 30px;
+background:#030607e8;
+backdrop-filter:blur(15px);
+border-bottom:1px solid #a8b8b055;
+}
+
+.nav-inner{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:#b8c7c3;
+letter-spacing:5px;
+font:14px Arial;
+text-decoration:none;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:#a5aaa7;
+text-decoration:none;
+font:11px Arial;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.nav-links a:hover{
+color:#c9d9d2;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:130px 25px 80px;
+
+background:
+radial-gradient(circle at 50% 35%,
+rgba(150,180,190,.18),
+transparent 45%);
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.eyebrow{
+color:#b9cbc6;
+font:700 11px Arial;
+letter-spacing:5px;
+text-transform:uppercase;
+}
+
+h1{
+font-size:clamp(70px,14vw,160px);
+line-height:.82;
+letter-spacing:7px;
+margin:30px 0;
+text-shadow:0 20px 70px #000;
+}
+
+.subtitle{
+color:#aab3b0;
+font-size:20px;
+max-width:720px;
+margin:auto;
+}
+
+.line{
+width:180px;
+height:1px;
+margin:38px auto;
+background:#b9cbc6;
+}
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:110px 25px;
+}
+
+.section-title{
+font-size:52px;
+line-height:1.1;
+margin:15px 0 25px;
+}
+
+.panel{
+background:
+linear-gradient(145deg,#151d20,#050708);
+border:1px solid #a8b8b044;
+padding:42px;
+margin-top:25px;
+box-shadow:0 30px 80px #000a;
+transition:.3s;
+}
+
+.panel:hover{
+border-color:#b9cbc688;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-top:35px;
+}
+
+.info{
+border-top:1px solid #a8b8b055;
+padding-top:15px;
+color:#a8b0ad;
+font:12px Arial;
+letter-spacing:1px;
+}
+
+.info strong{
+display:block;
+color:#b9cbc6;
+margin-bottom:7px;
+}
+
+.realm{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:35px;
+}
+
+.realm-card{
+padding:28px 20px;
+background:#0c1214;
+border:1px solid #a8b8b033;
+text-align:center;
+transition:.3s;
+}
+
+.realm-card:hover{
+border-color:#b9cbc6;
+background:#142023;
+}
+
+.realm-card .symbol{
+font-size:36px;
+display:block;
+margin-bottom:10px;
+}
+
+.realm-card h3{
+margin:8px 0;
+color:#cad8d4;
+}
+
+.realm-card p{
+font-size:14px;
+color:#929b98;
+}
+
+.quote{
+border-left:2px solid #b9cbc6;
+padding-left:25px;
+color:#b9cbc6;
+font-size:25px;
+font-style:italic;
+}
+
+.back{
+display:inline-block;
+margin-top:35px;
+padding:14px 25px;
+border:1px solid #b9cbc6;
+color:#b9cbc6;
+text-decoration:none;
+font:11px Arial;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.back:hover{
+background:#b9cbc6;
+color:#071012;
+}
+
+footer{
+text-align:center;
+padding:55px 20px;
+border-top:1px solid #a8b8b044;
+color:#68716f;
+font:10px Arial;
+letter-spacing:2px;
+}
+
+@media(max-width:750px){
+
+.nav-links{
+display:none;
+}
+
+.info-grid,
+.realm{
+grid-template-columns:1fr;
+}
+
+.panel{
+padding:27px;
+}
+
+h1{
+font-size:75px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="nav-inner">
+
+<a class="logo" href="../index.html">
+THE PANTHEON
+</a>
+
+<div class="nav-links">
+<a href="../index.html">Home</a>
+<a href="../gods.html">Gods</a>
+<a href="../heroes.html">Heroes</a>
+<a href="../monsters.html">Monsters</a>
+<a href="../myths.html">Myths</a>
+</div>
+
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+HALL OF OLYMPUS · EXHIBIT VII
+</div>
+
+<h1>ARTEMIS</h1>
+
+<div class="line"></div>
+
+<p class="subtitle">
+Goddess of the Hunt · Wilderness · Archery · The Moon
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+THE EXHIBIT
+</div>
+
+<h2 class="section-title">
+Lady of the Wild
+</h2>
+
+<div class="panel">
+
+<p>
+Artemis is the Greek goddess associated with the hunt,
+wilderness, wild animals and archery. She is also connected
+with childbirth and the protection of young people.
+</p>
+
+<p>
+She represents the untamed world beyond the walls of cities:
+forests, mountains, animals and the freedom of the hunt.
+</p>
+
+</div>
+
+<div class="info-grid">
+
+<div class="info">
+<strong>DOMAIN</strong>
+Hunt · Wilderness · Archery
+</div>
+
+<div class="info">
+<strong>PARENTS</strong>
+Zeus & Leto
+</div>
+
+<div class="info">
+<strong>SIBLING</strong>
+Apollo
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+THE HUNTRESS
+</div>
+
+<h2 class="section-title">
+Mistress of the Bow
+</h2>
+
+<div class="panel">
+
+<p>
+Artemis is commonly portrayed carrying a bow and travelling
+through wild landscapes with a group of hunting companions.
+</p>
+
+<p>
+Her skill with the bow reflects her independence and her
+close relationship with the wilderness.
+</p>
+
+<p class="quote">
+Beyond the walls of the city lies the realm of Artemis.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+SYMBOLS
+</div>
+
+<h2 class="section-title">
+Signs of Artemis
+</h2>
+
+<div class="realm">
+
+<div class="realm-card">
+<span class="symbol">🏹</span>
+<h3>The Bow</h3>
+<p>
+The defining weapon of the divine huntress.
+</p>
+</div>
+
+<div class="realm-card">
+<span class="symbol">🦌</span>
+<h3>The Deer</h3>
+<p>
+A sacred animal strongly associated with Artemis.
+</p>
+</div>
+
+<div class="realm-card">
+<span class="symbol">🌙</span>
+<h3>The Moon</h3>
+<p>
+Later traditions closely connected Artemis with the moon.
+</p>
+</div>
+
+<div class="realm-card">
+<span class="symbol">🌲</span>
+<h3>The Wilderness</h3>
+<p>
+Forests and mountains form Artemis's natural domain.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+ACTAEON
+</div>
+
+<h2 class="section-title">
+A Warning to Mortals
+</h2>
+
+<div class="panel">
+
+<p>
+One famous myth tells of Actaeon, a hunter who encountered
+Artemis while she was bathing.
+</p>
+
+<p>
+The myth illustrates the strict boundaries surrounding the
+goddess and the dangers of violating sacred spaces.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+TWIN OF APOLLO
+</div>
+
+<h2 class="section-title">
+Artemis & Apollo
+</h2>
+
+<div class="panel">
+
+<p>
+Artemis and Apollo are twins, children of Zeus and Leto.
+Their domains often complement one another.
+</p>
+
+<p>
+Apollo became associated with music, prophecy and healing,
+while Artemis became associated with the wilderness, hunting
+and the natural world.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+FAMILY
+</div>
+
+<h2 class="section-title">
+The House of Artemis
+</h2>
+
+<div class="panel">
+
+<div class="info-grid">
+
+<div class="info">
+<strong>FATHER</strong>
+Zeus
+</div>
+
+<div class="info">
+<strong>MOTHER</strong>
+Leto
+</div>
+
+<div class="info">
+<strong>TWIN BROTHER</strong>
+Apollo
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+LEGACY
+</div>
+
+<div class="panel">
+
+<p class="quote">
+Artemis embodies the freedom, beauty and danger of the
+world beyond civilisation.
+</p>
+
+<p>
+Her mythology reminds us that the ancient Greeks saw the
+wilderness as a place filled with both wonder and divine
+power.
+</p>
+
+</div>
+
+<a class="back" href="../gods.html">
+← Return to the Hall of Olympus
+</a>
+
+</section>
+
+
+<footer>
+THE PANTHEON · DIGITAL MUSEUM OF GREEK MYTHOLOGY
+</footer>
+
+</body>
+</html>
