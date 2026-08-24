@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Ares — The Pantheon</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:
+radial-gradient(circle at 50% 0%,#321616,#100707 45%,#040303);
+color:#eee1d5;
+font-family:Georgia,"Times New Roman",serif;
+line-height:1.8;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+z-index:50;
+padding:18px 30px;
+background:#050303e8;
+backdrop-filter:blur(15px);
+border-bottom:1px solid #a34d4255;
+}
+
+.nav-inner{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:#c87568;
+letter-spacing:5px;
+font:14px Arial;
+text-decoration:none;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:#aaa19c;
+text-decoration:none;
+font:11px Arial;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.nav-links a:hover{
+color:#dc8b7d;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:130px 25px 80px;
+background:
+radial-gradient(circle at 50% 35%,rgba(166,51,37,.20),transparent 45%);
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.eyebrow{
+color:#cf796b;
+font:700 11px Arial;
+letter-spacing:5px;
+text-transform:uppercase;
+}
+
+h1{
+font-size:clamp(70px,14vw,160px);
+line-height:.82;
+letter-spacing:7px;
+margin:30px 0;
+text-shadow:0 20px 70px #000;
+}
+
+.subtitle{
+color:#b5a9a4;
+font-size:20px;
+max-width:720px;
+margin:auto;
+}
+
+.line{
+width:180px;
+height:1px;
+margin:38px auto;
+background:#cf796b;
+}
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:110px 25px;
+}
+
+.section-title{
+font-size:52px;
+line-height:1.1;
+margin:15px 0 25px;
+}
+
+.panel{
+background:linear-gradient(145deg,#21100f,#080505);
+border:1px solid #a34d4244;
+padding:42px;
+margin-top:25px;
+box-shadow:0 30px 80px #000b;
+transition:.3s;
+}
+
+.panel:hover{
+border-color:#cf796b88;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-top:35px;
+}
+
+.info{
+border-top:1px solid #a34d4255;
+padding-top:15px;
+color:#aaa19c;
+font:12px Arial;
+letter-spacing:1px;
+}
+
+.info strong{
+display:block;
+color:#cf796b;
+margin-bottom:7px;
+}
+
+.realm{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:35px;
+}
+
+.realm-card{
+padding:28px 20px;
+background:#130908;
+border:1px solid #a34d4233;
+text-align:center;
+transition:.3s;
+}
+
+.realm-card:hover{
+border-color:#cf796b;
+background:#21100f;
+}
+
+.realm-card .symbol{
+font-size:36px;
+display:block;
+margin-bottom:10px;
+}
+
+.realm-card h3{
+margin:8px 0;
+color:#e0b0a7;
+}
+
+.realm-card p{
+font-size:14px;
+color:#988d89;
+}
+
+.quote{
+border-left:2px solid #cf796b;
+padding-left:25px;
+color:#cf796b;
+font-size:25px;
+font-style:italic;
+}
+
+.back{
+display:inline-block;
+margin-top:35px;
+padding:14px 25px;
+border:1px solid #cf796b;
+color:#cf796b;
+text-decoration:none;
+font:11px Arial;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.back:hover{
+background:#cf796b;
+color:#080505;
+}
+
+footer{
+text-align:center;
+padding:55px 20px;
+border-top:1px solid #a34d4244;
+color:#6f6260;
+font:10px Arial;
+letter-spacing:2px;
+}
+
+@media(max-width:750px){
+.nav-links{display:none}
+.info-grid,.realm{grid-template-columns:1fr}
+.panel{padding:27px}
+h1{font-size:75px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-inner">
+
+<a class="logo" href="../index.html">
+THE PANTHEON
+</a>
+
+<div class="nav-links">
+<a href="../index.html">Home</a>
+<a href="../gods.html">Gods</a>
+<a href="../heroes.html">Heroes</a>
+<a href="../monsters.html">Monsters</a>
+<a href="../myths.html">Myths</a>
+</div>
+
+</div>
+</nav>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+HALL OF OLYMPUS · EXHIBIT VIII
+</div>
+
+<h1>ARES</h1>
+
+<div class="line"></div>
+
+<p class="subtitle">
+God of War · Battle · Conflict · The Fury of Combat
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+THE EXHIBIT
+</div>
+
+<h2 class="section-title">
+The God of War
+</h2>
+
+<div class="panel">
+
+<p>
+Ares represents the violent and chaotic side of warfare.
+He is associated with battle, conflict, courage and the
+fury of combat.
+</p>
+
+<p>
+Unlike Athena, whose warfare is associated with strategy
+and intelligence, Ares represents the raw force and
+danger of battle itself.
+</p>
+
+</div>
+
+<div class="info-grid">
+
+<div class="info">
+<strong>DOMAIN</strong>
+War · Conflict · Battle
+</div>
+
+<div class="info">
+<strong>PARENTS</strong>
+Zeus & Hera
+</div>
+
+<div class="info">
+<strong>SYMBOLS</strong>
+Spear · Shield · Helmet
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+ARES & ATHENA
+</div>
+
+<h2 class="section-title">
+Two Faces of War
+</h2>
+
+<div class="panel">
+
+<p>
+Greek mythology often places Ares and Athena in contrast.
+Both are connected with warfare, but they represent
+different aspects of it.
+</p>
+
+<p>
+Athena embodies planning, strategy and disciplined action.
+Ares embodies aggression, violence and the chaos of combat.
+</p>
+
+<p class="quote">
+War requires both the mind that plans and the force that fights.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+SYMBOLS
+</div>
+
+<h2 class="section-title">
+Signs of Ares
+</h2>
+
+<div class="realm">
+
+<div class="realm-card">
+<span class="symbol">⚔️</span>
+<h3>The Sword</h3>
+<p>
+A symbol of battle and close combat.
+</p>
+</div>
+
+<div class="realm-card">
+<span class="symbol">🛡️</span>
+<h3>The Shield</h3>
+<p>
+Represents the warrior and the battlefield.
+</p>
+</div>
+
+<div class="realm-card">
+<span class="symbol">🪖</span>
+<h3>The Helmet</h3>
+<p>
+An emblem of the armed warrior.
+</p>
+</div>
+
+<div class="realm-card">
+<span class="symbol">🐗</span>
+<h3>The Boar</h3>
+<p>
+An animal associated with Ares in ancient tradition.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+APHRODITE
+</div>
+
+<h2 class="section-title">
+Ares & Aphrodite
+</h2>
+
+<div class="panel">
+
+<p>
+Ares was famously connected with Aphrodite, the goddess
+of love and beauty.
+</p>
+
+<p>
+Their relationship created one of Greek mythology's most
+striking contrasts: war and love existing side by side.
+</p>
+
+<p>
+The stories surrounding them became popular subjects in
+ancient art and later European literature.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+THE WARRIOR
+</div>
+
+<h2 class="section-title">
+A Dangerous Reputation
+</h2>
+
+<div class="panel">
+
+<p>
+Ares was not always portrayed as a heroic warrior. Greek
+myths often depict him as impulsive and destructive.
+</p>
+
+<p>
+Even other gods could oppose him, demonstrating that
+physical power alone did not make someone a respected
+leader.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+FAMILY
+</div>
+
+<h2 class="section-title">
+The House of Ares
+</h2>
+
+<div class="panel">
+
+<div class="info-grid">
+
+<div class="info">
+<strong>FATHER</strong>
+Zeus
+</div>
+
+<div class="info">
+<strong>MOTHER</strong>
+Hera
+</div>
+
+<div class="info">
+<strong>PARTNER</strong>
+Aphrodite
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">
+LEGACY
+</div>
+
+<div class="panel">
+
+<p class="quote">
+Ares represents war without the illusion that battle is glorious.
+</p>
+
+<p>
+Through Ares, Greek mythology personified the fear,
+anger and unpredictability of conflict.
+</p>
+
+</div>
+
+<a class="back" href="../gods.html">
+← Return to the Hall of Olympus
+</a>
+
+</section>
+
+
+<footer>
+THE PANTHEON · DIGITAL MUSEUM OF GREEK MYTHOLOGY
+</footer>
+
+</body>
+</html>
