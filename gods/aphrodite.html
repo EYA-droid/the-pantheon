@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Aphrodite — The Pantheon</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+background:
+radial-gradient(circle at 50% 0%,#302126,#11090e 45%,#040304);
+color:#eee1df;
+font-family:Georgia,"Times New Roman",serif;
+line-height:1.8;
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+z-index:50;
+padding:18px 30px;
+background:#050304e8;
+backdrop-filter:blur(15px);
+border-bottom:1px solid #b47b8b55;
+}
+
+.nav-inner{
+max-width:1200px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+color:#d5a9b6;
+letter-spacing:5px;
+font:14px Arial;
+text-decoration:none;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:#aaa0a4;
+text-decoration:none;
+font:11px Arial;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.nav-links a:hover{
+color:#e0b5c2;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:130px 25px 80px;
+
+background:
+radial-gradient(circle at 50% 35%,
+rgba(190,116,143,.18),
+transparent 45%);
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.eyebrow{
+color:#d5a9b6;
+font:700 11px Arial;
+letter-spacing:5px;
+text-transform:uppercase;
+}
+
+h1{
+font-size:clamp(65px,13vw,150px);
+line-height:.82;
+letter-spacing:7px;
+margin:30px 0;
+text-shadow:0 20px 70px #000;
+}
+
+.subtitle{
+color:#b7abad;
+font-size:20px;
+max-width:720px;
+margin:auto;
+}
+
+.line{
+width:180px;
+height:1px;
+margin:38px auto;
+background:#d5a9b6;
+}
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:110px 25px;
+}
+
+.section-title{
+font-size:52px;
+line-height:1.1;
+margin:15px 0 25px;
+}
+
+.panel{
+background:
+linear-gradient(145deg,#21151a,#080506);
+border:1px solid #b47b8b44;
+padding:42px;
+margin-top:25px;
+box-shadow:0 30px 80px #000b;
+transition:.3s;
+}
+
+.panel:hover{
+border-color:#d5a9b688;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+margin-top:35px;
+}
+
+.info{
+border-top:1px solid #b47b8b55;
+padding-top:15px;
+color:#aaa0a4;
+font:12px Arial;
+letter-spacing:1px;
+}
+
+.info strong{
+display:block;
+color:#d5a9b6;
+margin-bottom:7px;
+}
+
+.realm{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:35px;
+}
+
+.realm-card{
+padding:28px 20px;
+background:#140b10;
+border:1px solid #b47b8b33;
+text-align:center;
+transition:.3s;
+}
+
+.realm-card:hover{
+border-color:#d5a9b6;
+background:#21131a;
+}
+
+.realm-card .symbol{
+font-size:36px;
+display:block;
+margin-bottom:10px;
+}
+
+.realm-card h3{
+margin:8px 0;
+color:#e1bdc8;
+}
+
+.realm-card p{
+font-size:14px;
+color:#999095;
+}
+
+.quote{
+border-left:2px solid #d5a9b6;
+padding-left:25px;
+color:#d5a9b6;
+font-size:25px;
+font-style:italic;
+}
+
+.back{
+display:inline-block;
+margin-top:35px;
+padding:14px 25px;
+border:1px solid #d5a9b6;
+color:#d5a9b6;
+text-decoration:none;
+font:11px Arial;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.back:hover{
+background:#d5a9b6;
+color:#090507;
+}
+
+footer{
+text-align:center;
+padding:55px 20px;
+border-top:1px solid #b47b8b44;
+color:#70636a;
+font:10px Arial;
+letter-spacing:2px;
+}
+
+@media(max-width:750px){
+.nav-links{display:none}
+.info-grid,.realm{grid-template-columns:1fr}
+.panel{padding:27px}
+h1{font-size:70px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="nav-inner">
+
+<a class="logo" href="../index.html">THE PANTHEON</a>
+
+<div class="nav-links">
+<a href="../index.html">Home</a>
+<a href="../gods.html">Gods</a>
+<a href="../heroes.html">Heroes</a>
+<a href="../monsters.html">Monsters</a>
+<a href="../myths.html">Myths</a>
+</div>
+
+</div>
+</nav>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="eyebrow">
+HALL OF OLYMPUS · EXHIBIT IX
+</div>
+
+<h1>APHRODITE</h1>
+
+<div class="line"></div>
+
+<p class="subtitle">
+Goddess of Love · Beauty · Desire · Attraction
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">THE EXHIBIT</div>
+
+<h2 class="section-title">The Goddess of Love</h2>
+
+<div class="panel">
+
+<p>
+Aphrodite is the Greek goddess associated with love,
+beauty, desire and attraction. She is one of the most
+famous figures in Greek mythology.
+</p>
+
+<p>
+Her power was not limited to romantic love. The Greeks
+also connected her with beauty, desire, fertility and
+the irresistible forces that bring people together.
+</p>
+
+</div>
+
+<div class="info-grid">
+
+<div class="info">
+<strong>DOMAIN</strong>
+Love · Beauty · Desire
+</div>
+
+<div class="info">
+<strong>ASSOCIATED WITH</strong>
+Sea · Roses · Doves
+</div>
+
+<div class="info">
+<strong>PARTNER</strong>
+Hephaestus · Ares in myth
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">BIRTH</div>
+
+<h2 class="section-title">Born From the Sea</h2>
+
+<div class="panel">
+
+<p>
+One famous tradition says Aphrodite emerged from the sea
+foam and arrived upon the shore.
+</p>
+
+<p>
+This dramatic origin became one of the most enduring images
+in Greek mythology and later inspired countless artists.
+</p>
+
+<p class="quote">
+From the sea came the goddess whose beauty could influence
+gods and mortals alike.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">SYMBOLS</div>
+
+<h2 class="section-title">Signs of Aphrodite</h2>
+
+<div class="realm">
+
+<div class="realm-card">
+<span class="symbol">🌹</span>
+<h3>The Rose</h3>
+<p>
+A traditional symbol of beauty and love.
+</p>
+</div>
+
+<div class="realm-card">
+<span class="symbol">🕊️</span>
+<h3>The Dove</h3>
+<p>
+An animal associated with Aphrodite.
+</p>
+</div>
+
+<div class="realm-card">
+<span class="symbol">🐚</span>
+<h3>The Seashell</h3>
+<p>
+A symbol connected with her legendary birth from the sea.
+</p>
+</div>
+
+<div class="realm-card">
+<span class="symbol">🍎</span>
+<h3>The Golden Apple</h3>
+<p>
+Central to the famous Judgement of Paris.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">THE GOLDEN APPLE</div>
+
+<h2 class="section-title">The Judgement of Paris</h2>
+
+<div class="panel">
+
+<p>
+At the wedding of Peleus and Thetis, the goddess Eris
+caused trouble by introducing a golden apple intended for
+the fairest goddess.
+</p>
+
+<p>
+Hera, Athena and Aphrodite each claimed it. Paris of Troy
+was chosen to decide which goddess was the fairest.
+</p>
+
+<p>
+Aphrodite promised Paris the love of the most beautiful
+woman in the world. Paris selected Aphrodite, a decision
+that helped set the events leading to the Trojan War in motion.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">ARES</div>
+
+<h2 class="section-title">Love & War</h2>
+
+<div class="panel">
+
+<p>
+Aphrodite's relationship with Ares creates one of Greek
+mythology's most memorable contrasts: love and war.
+</p>
+
+<p>
+The two gods appear together in several myths and became
+a powerful symbolic pairing in ancient storytelling.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">FAMILY</div>
+
+<h2 class="section-title">The Goddess of Beauty</h2>
+
+<div class="panel">
+
+<div class="info-grid">
+
+<div class="info">
+<strong>ORIGIN</strong>
+Sea Foam Tradition
+</div>
+
+<div class="info">
+<strong>HUSBAND</strong>
+Hephaestus
+</div>
+
+<div class="info">
+<strong>ASSOCIATED GOD</strong>
+Ares
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="eyebrow">LEGACY</div>
+
+<div class="panel">
+
+<p class="quote">
+Aphrodite represents the powerful forces of attraction,
+beauty and desire.
+</p>
+
+<p>
+Her image has survived for thousands of years, appearing
+again and again in sculpture, painting, poetry and literature.
+</p>
+
+</div>
+
+<a class="back" href="../gods.html">
+← Return to the Hall of Olympus
+</a>
+
+</section>
+
+
+<footer>
+THE PANTHEON · DIGITAL MUSEUM OF GREEK MYTHOLOGY
+</footer>
+
+</body>
+</html>
